@@ -1,4 +1,4 @@
-// Desc: Login component 
+
 import '../Styles/Login.css'
 const Login = () => {
     const handleSubmit = (e) => {

@@ -11,7 +11,7 @@ function App() {
       <div className="loginpage">
         <Navbar />
         <HomePage />
-        {/* <Login />  */}
+        <Login />  
       </div>
     </div>
   );
