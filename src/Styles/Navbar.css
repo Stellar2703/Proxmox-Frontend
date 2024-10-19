@@ -6,10 +6,10 @@
     overflow: auto;
     scrollbar-width: none;
     width: 20vw;
-    background-color: black;
+    background-color: #080b03ab;
     color: white;
     position: absolute;
-    padding-left: 0.5vw;
+    /* padding-left: 0.5vw; */
     z-index: 1;
     
 

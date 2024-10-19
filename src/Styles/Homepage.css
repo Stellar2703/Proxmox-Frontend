@@ -1,127 +1,161 @@
-body{
-    margin: 0%;
-    background-color: rgb(16, 21, 27);
-    color: white;
-    z-index: 0;
-    height: 1000vh;
-}
-
-.HomeContent{
-    text-align: left;
-    margin-left: 22vw;
-    
-}
-
-.UsageStat{
-    display: flex;
-    flex-direction: row;
-    margin: 0;
-
-    
-}
-
-.UsageStat > *{
-    flex: 1;
-    margin: 0 3vw;
+.Home {
+  /* margin: 0px; */
+  /* padding: 0px; */
+  background-color: rgb(16, 21, 27);
+  color: white;
+  z-index: 1;
+  height: 100vh;
+  /* border: 2px solid red; */
 
 }
 
-.Search{
-    display: flex;
-    margin: 1vw 3vw;
-    margin: 10px;
-    width: 200px;
-    height: 30px;
-    border-radius: 5px;
-    border: 1.5px solid #928a8a;
-    padding: 5px;
-    background-color: rgb(16, 21, 27);
-    font-size: larger;
-
+.Image_And_Info{
+  display: flex ;
+  margin-right: 20px;
+  margin: 10px;
+  
 }
 
-.Info{
-    display: flex;
-    flex-direction: row;
-    padding-left: 10px;
-    align-items: center;
+h1{
+  margin: 0px;
 }
 
-.Info > *{
-    margin: 0 10px;
+.HomeContent {
+  text-align: left;
+  margin-left: 22vw;
+}
+
+.UsageStat {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  color: #00a58c;
+}
+
+.UsageStat>* {
+  flex: 1;
+  margin: 0 2vw;
+}
+
+.Search {
+  display: flex;
+  margin: 1vw 3vw;
+  margin: 10px;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: 1.5px solid #928a8a;
+  padding: 5px;
+  background-color: rgb(16, 21, 27);
+  font-size: larger;
+}
+
+.Info {
+  display: flex;
+  flex-direction: row;
+  padding-left: 10px;
+  align-items: center;
+}
+
+.Info>* {
+  margin: 0 10px;
 
 }
 
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 40px;
-    height: 20px;
-  }
-  
- 
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #918e8e;
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 15px;
-    width: 15px;
-    left: 4px;
-    bottom: 3px;
-    background-color: rgb(255, 255, 255);
-    -webkit-transition: .4s;
-    transition: .4s;
-  }
-  
-  input:checked + .slider {
-    background-color: #51aefa;
-  }
-  
-  input:focus + .slider {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .slider:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(19px);
-  }
-  
-  /* Rounded sliders */
-  .slider.round {
-    border-radius: 34px;
-  }
-  
-  .slider.round:before {
-    border-radius: 50%;
-  }
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
 
-  .Table{
-    display: flex;
-    padding: 10px;
-    margin-top: 10px;
-    
-  }
 
-  .Table  > *{
-    flex: 0.7;
-    /* margin: 0 10px; */
-    padding-top: 3px;
-  }
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #918e8e;
+  /* -webkit-transition: .4s; */
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 3px;
+  background-color: rgb(255, 255, 255);
+  /* -webkit-transition: .4s; */
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #51aefa;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  /* -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px); */
+  transform: translateX(19px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.Table {
+  display: flex;
+  padding: 10px;
+  margin-top: 10px;
+
+}
+
+.Table>* {
+  flex: 1;
+  /* margin: 0 10px; */
+  /* padding-top: 3px; */
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  border-bottom: 1px solid #635b5b;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  /* background-color: #007bff; */
+  color: white;
+}
+
+
+tr:hover {
+  background-color: rgb(58, 65, 71);
+  transition: 0.6s;
+}

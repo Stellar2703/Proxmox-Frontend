@@ -4,12 +4,22 @@ const TableData = (props) => {
 
         <tr>
             <td>{props.number}</td>
-            <td>{props.Container} 1</td>
+            
+            <td>
+                <div className='Image_And_Info'>
+                    <div className='Image'>
+                        {props.Image}
+                    </div>
+                    <div className='Info'>
+                        {props.Container}
+                    </div>
+                </div>
+            </td>
             <td>{props.Status}</td>
             <td>{props.IP}</td>
             <td>{props.resource}</td>
         </tr>
-    
+
     )
 }
 
@@ -21,11 +31,11 @@ const HomePage = () => {
                 <div className="UsageStat">
                     <div className="CPU">
                         <h3>Memory Usage</h3>
-                        <p>10%</p>
+                        <p>10/64 GB</p>
                     </div>
                     <div className="Memory">
                         <h3>Cpu Usage</h3>
-                        <p>20%</p>
+                        <p>20/600 %</p>
                     </div>
                 </div>
                 <div className="Info">
@@ -47,21 +57,18 @@ const HomePage = () => {
                                 <th>Stats</th>
                             </tr>
                         </thead>
+                        
                         <tbody>
-                            
-                                <TableData number="1" Container="Hello-World" Status="Active"IP="10.10.237.155" resource="10/50 GB" />
-                                <TableData number="56" Container="Hello-World" Status="Active" IP="10.10.237.155" resource="10/50 GB" />
-                                <TableData number="56dfdfgdfgdf5" Container="Hello-World" Status="NOn-Active" IP="10.10.237.155" resource="10/50 GB" />
-                                <TableData number="5658" Container="Hello-World" Status="Active" IP="10.10.237.155" resource="10/50 GB" />
 
-                            
+                            <TableData number="56" Container="Hello-World" Image="fghj" Status="Active" IP="10.10.237.155" resource="10/50 GB" />
+                            <TableData number="56dfdfgdfgdf5" Container="Hello-World" Status="NOn-Active" IP="10.10.237.155" resource="10/50 GB" />
+                            <TableData number="5658" Container="Hello-World" Status="Active" IP="10.10.237.155" resource="10/50 GB" />
+
+
                         </tbody>
                     </table>
                 </div>
             </div>
-
-
-
         </div>
     )
 }
