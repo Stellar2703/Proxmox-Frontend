@@ -1,0 +1,52 @@
+.Analytics{
+    background-color: rgb(16, 21, 27);
+    color: white;
+}
+
+
+/* General button styles for a Docker-like look */
+button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    margin: 5px;
+    color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Light shadow */
+  }
+  
+  /* Button active (pressed) effect */
+  button:active {
+    transform: scale(0.98); /* Slightly reduce size */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15); /* Subtle shadow when pressed */
+  }
+  
+  /* Start button - Docker uses blue themes */
+  .start-btn,.stop-btn,.restart-btn {
+    background-color: #2986ff; /* Docker's primary blue */
+  }
+  
+  .start-btn:hover,.stop-btn:hover,.restart-btn:hover {
+    background-color: #0069d9; /* Darker blue on hover */
+  }
+  
+
+  
+  /* Delete button - Docker often uses gray tones */
+  .delete-btn {
+    background-color: #dd4659; /* Gray */
+  }
+  
+  .delete-btn:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+  }
+  
+  /* Add a subtle focus outline for accessibility */
+  button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5); /* Blue outline on focus */
+  }
+  
