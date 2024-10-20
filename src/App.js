@@ -12,9 +12,9 @@ function App() {
   return (
     <div className="App">
       <div className="loginpage">
-        {/* <Navbar /> */}
-        {/* <HomePage /> */}
-        <ContainerAnalytics/>
+        <Navbar />
+        <HomePage />
+        {/* <ContainerAnalytics/> */}
         {/* <Login />   */}
         {/* <Speedometer speed={473} /> */}
       </div>
