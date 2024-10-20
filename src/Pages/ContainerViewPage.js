@@ -4,7 +4,7 @@ import '../Styles/ContainerViewPage.css';
 const ContainerAnalytics = () => {
     return (
         <div className="Analytics">
-            {/* <p>{NodeName} / {ContainerName}</p> */}
+            {/* <p>{NodeName} / {ContainerName}</p>
             <p>NodeName / ContainerName</p>
             <div className='Header'>
                 <h1>Container Analytics</h1>
@@ -19,7 +19,8 @@ const ContainerAnalytics = () => {
                     <button class="delete-btn">Delete</button>
 
                 </div>
-            </div>
+            </div> */}
+        <h1>dfghjkl</h1>
         </div>
     );
 }
