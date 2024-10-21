@@ -22,7 +22,10 @@ const ContainerAnalytics = () => {
                     <button class="delete-btn">Dele</button>
                 </div>
                 </div>
-            <div className="Resouces">
+            <div className="Resources">
+                <Speedometer />
+                <Speedometer />
+                <Speedometer />
                 <Speedometer />
 
             </div>

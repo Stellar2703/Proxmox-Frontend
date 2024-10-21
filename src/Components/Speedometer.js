@@ -10,11 +10,12 @@ const Speedometer = ({ speed }) => {
         minValue={0}
         maxValue={100}
         segments={1}
-        width={170}
+        width={180}
         height={190}
+        ringWidth={35}
         // startColor
         // endColor
-        needleHeightRatio={0.7}
+        needleHeightRatio={0.65}
 />
         </div>
     );
