@@ -1,19 +1,18 @@
 .Home {
   /* margin: 0px; */
   /* padding: 0px; */
-  background-color: rgb(16, 21, 27);
+  background-color: #10151b;
   color: white;
   z-index: 1;
-  height: 100vh;
+  height: 94vh;
   /* border: 2px solid red; */
-
 }
 
 .Image_And_Info{
   display: flex ;
-  margin-right: 20px;
-  margin: 10px;
-  
+  /* margin-right: 20px;
+  margin: 10px; */
+  align-items: center;
 }
 
 h1{
@@ -23,6 +22,7 @@ h1{
 .HomeContent {
   text-align: left;
   margin-left: 22vw;
+
 }
 
 .UsageStat {
@@ -36,7 +36,9 @@ h1{
   flex: 1;
   margin: 0 2vw;
 }
-
+.Info{
+  padding: 15px;
+}
 .Search {
   display: flex;
   margin: 1vw 3vw;
@@ -59,7 +61,6 @@ h1{
 
 .Info>* {
   margin: 0 10px;
-
 }
 
 .switch {
@@ -68,7 +69,6 @@ h1{
   width: 40px;
   height: 20px;
 }
-
 
 .switch input {
   opacity: 0;
@@ -114,7 +114,6 @@ input:checked+.slider:before {
   transform: translateX(19px);
 }
 
-/* Rounded sliders */
 .slider.round {
   border-radius: 34px;
 }
@@ -126,7 +125,7 @@ input:checked+.slider:before {
 .Table {
   display: flex;
   padding: 10px;
-  margin-top: 10px;
+  /* margin-top: 10px; */
 
 }
 
@@ -136,7 +135,6 @@ input:checked+.slider:before {
   /* padding-top: 3px; */
 }
 
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -145,7 +143,7 @@ table {
 
 th, td {
   border-bottom: 1px solid #635b5b;
-  padding: 8px;
+  /* padding: 1px; */
   text-align: left;
 }
 

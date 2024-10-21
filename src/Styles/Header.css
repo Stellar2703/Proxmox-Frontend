@@ -1,8 +1,15 @@
-.Header{
-    display: flex;
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+.Header {
+display: flex;
     flex-direction: row;
-    background-color: #022579;
+    background-color: #013dc9;
     color: white;
     text-align: left;
-    margin: 2px;
+    height: 6vh;
+    width: 98vw;
+    padding-left: 2vw;
+    align-items: center;
+    font-size-adjust: 0.38;
+    margin: 0;  
+    font-family: 'Arima', sans-serif;
 }
