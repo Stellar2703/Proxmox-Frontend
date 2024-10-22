@@ -16,8 +16,8 @@ function App() {
         <Header/>
         <Navbar />
         {/* <HomePage /> */}
-        <ContainerAnalytics/> 
-        {/* <Login />  */}
+        {/* <ContainerAnalytics/>  */}
+        <Login /> 
       </div>
     </div>
   );
