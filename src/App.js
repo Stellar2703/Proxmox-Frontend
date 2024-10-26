@@ -4,6 +4,7 @@ import Login from './Pages/Login';
 import { BrowserRouter as Router, Route, Routes , useLocation } from 'react-router-dom';
 import Navbar from './Pages/Navbar';
 import HomePage from './Pages/Homepage';
+import Test from './Pages/Test';
 import ContainerAnalytics from './Pages/ContainerViewPage';
 import Header from './Components/Header';
 // import TerminalComponent from './Components/Terminal';
@@ -30,6 +31,7 @@ function Navigation() {
         <Route path="/login" element={<Login />} />
         <Route path="/homepage" element={<HomePage />} />
         <Route path="/containeranalytics" element={<ContainerAnalytics />} />
+        <Route path="/test" element={<Test />} />
         {/* Add other routes here as needed */}
       </Routes>
     </div>

@@ -1,10 +1,13 @@
-
+import{useNavigate} from 'react-router-dom';
 import '../Styles/Login.css'
 const Login = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log('Form submitted');
+        navigate('/homepage');
     }
+const navigate = useNavigate();
+
     return (
         <div className="main">
             <form onSubmit={handleSubmit}>
