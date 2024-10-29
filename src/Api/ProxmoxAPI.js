@@ -1,34 +1,63 @@
 import axios from 'axios';
 
-const PROXMOX_API_URL = 'http://10.10.237.155:8080/api2/json';
-const API_TOKEN = 'PVEAPIToken=<API>@<pve>!<Frontend-1>=<ba9ed196-0d4b-4643-ab90-a87d50996e6e>'; // Replace with actual token
-
-// Set up Axios instance with default headers
-const api = axios.create({
-  baseURL: PROXMOX_API_URL,
-  headers: {
-    Authorization: API_TOKEN,
-  },
-});
-
-// Function to get nodes data
-export const getNodes = async () => {
+// Function to login and get tokens
+export const loginToProxmox = async () => {
   try {
-    const response = await api.get('/nodes');
-    return response.data.data; // Proxmox returns data in the "data" field
+    const response = await axios.post(
+      '/api/access/ticket',
+      new URLSearchParams({
+        username: 'root@pam',
+        password: 'Test@321',
+      })
+    );
+
+    const { data } = response.data;
+    const ticket = data.ticket;
+    const csrfToken = data.CSRFPreventionToken;
+
+    localStorage.setItem('proxmox_ticket', ticket);
+    localStorage.setItem('proxmox_csrf_token', csrfToken);
+
+    console.log('Login successful');
   } catch (error) {
-    console.error('Error fetching nodes:', error);
-    throw error;
+    console.error('Login failed', error);
   }
 };
 
-// Function to get VMs on a specific node
-export const getVMs = async (nodeName) => {
+// Function to get nodes
+export const getNodes = async () => {
+  const ticket = localStorage.getItem('proxmox_ticket');
+  const csrfToken = localStorage.getItem('proxmox_csrf_token');
+
   try {
-    const response = await api.get(`/nodes/${nodeName}/qemu`);
+    const response = await axios.get('/api/nodes', {
+      headers: {
+        Cookie: `PVEAuthCookie=${ticket}`,
+        CSRFPreventionToken: csrfToken,
+      },
+    });
+
     return response.data.data;
   } catch (error) {
-    console.error(`Error fetching VMs for node ${nodeName}:`, error);
-    throw error;
+    console.error('Failed to fetch nodes', error);
+  }
+};
+
+// Function to get VMs
+export const getVMs = async (nodeName) => {
+  const ticket = localStorage.getItem('proxmox_ticket');
+  const csrfToken = localStorage.getItem('proxmox_csrf_token');
+
+  try {
+    const response = await axios.get(`/api/nodes/${nodeName}/qemu`, {
+      headers: {
+        Cookie: `PVEAuthCookie=${ticket}`,
+        CSRFPreventionToken: csrfToken,
+      },
+    });
+
+    return response.data.data;
+  } catch (error) {
+    console.error('Failed to fetch VMs', error);
   }
 };
