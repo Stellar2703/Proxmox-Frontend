@@ -2,7 +2,7 @@
 
 import axios from 'axios';
 
-const PROXMOX_URL = 'https://10.10.237.155:8006/api2/json/';
+const PROXMOX_URL = 'http://localhost/api2/';
 
 const proxmoxApi = axios.create({
   baseURL: PROXMOX_URL,
